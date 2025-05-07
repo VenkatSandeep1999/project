@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    * {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    
+    body {
+        background-color: #c6cdd3;
+        color: #0c0c0c;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        min-width: 500px;
+    }
+    
+    a {
+        text-decoration: none;
+        color: rgb(47, 40, 40);
+    }
+    
+    #para {
+        margin-left: 25px;
+    }
+    
+    img {
+        margin-top: 10px;
+        border-radius: 6px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+    
+    .header {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        background-color: #9b9d9f;
+        padding: 10px;
+        margin-left: 20px;
+        margin-right: 15px;
+        text-align: center;
+    }
+    
+    .pnamess {
+        grid-column: 1 / -1;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 6px;
+        text-align: center;
+        font-size: 32px;
+    }
+    
+    .header a {
+        margin: 0 15px;
+        font-size: 20px;
+    }
+    
+    section {
+        margin: none;
+        padding: none;
+    }
+    
+    .about {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+        margin-top: 20px;
+        background-color: #acc1d3;
+    }
+    
+    .skills {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    
+    #pname {
+        text-align: center;
+    }
+    
+    .projects {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(5, 2fr);
+        gap: 10px;
+        background-color: #eef3f9;
+    }
+    
+    .experience {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1.3fr 5fr;
+        gap: 10px;
+        margin-top: 20px;
+        background-color: #cee2f8;
+    }
+    
+    .education {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 6px;
+        background-color: #eef3f9;
+    }
+    
+    .blog {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 0.2fr 5fr 0.3fr;
+        gap: 20px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 6px;
+        background-color: #eef3f9;
+    }
+    
+    .message{
+        background-color: #cee2f8;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    
+    #contactaa {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 18px;
+        text-align: center;
+        background-color: #858b92;
+    }
+    
+    #contactaa i {
+        font-size: 25px;
+        margin-left: 27px;
+    }
+    
+    .project i {
+        font-size: 100px;
+    }
+    
+    .education i {
+        font-size: 50px;
+    }
+    
+    .blog i {
+        font-size: 55px;
+    }
+    
+    strong {
+        text-align: center;
+    }
+    
+    #namess {
+        margin: top 30px;
+    }
+    
+    #exp {
+        margin-top: 35px;
+    }
+    
+    #icon {
+        width: 50%;
+        height: 50%;
+    }
+    
+    #submit {
+        margin-top: 20px;
+    }
+    
+    header{
+        margin-top:10px;
+    }
+    
+    .message {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr 0.7fr;
+        gap: 10px;
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 6px;
+    }
+    
+    .adjust {
+        width: 170px;
+        background-color: #9b9d9f;
+        color: rgb(47, 40, 40);
+        border-radius: 5px;
+        margin-left: 46%;
+    }
+    
+    #image {
+        margin-left: 10px;
+    }
+    
+    .hamburger {
+        display: none;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 100;
+    }
+    
+    .hamburger .bar {
+        display: none;
+    }
+    
+    @media (max-width: 500px) {
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .header {
+            grid-column: 1 / -1;
+            grid-template-columns: 1fr;
+            text-align: center;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .header a {
+            display: block;
+            margin: 10px 0;
+        }
+        .about, .skills, .projects, .experience, .education, .blog, .contact, .message {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .about img {
+            width: 100%;
+            height: auto;
+        }
+        .skills div, .projects div, .education div, .blog div, .contact div, .message input {
+            margin-bottom: 20px;
+        }
+        .adjust {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #expimg {
+            width: 100%;
+            height: auto;
+        }
+        .about {
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            text-align: center;
+        }
+        .about figure {
+            display: grid; 
+            justify-items: center;  
+            align-items: center;  
+        }
+        .about figcaption {
+            text-align: center;  
+        }
+        .hamburger {
+            display: block;
+        }
+        .hamburger .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 3px 225px;
+            background-color: rgb(47, 40, 40);
+            transition: all 0.3s ease;
+        }
+        .header a:not(.hamburger) {
+            display: none;
+        }
+        .header:hover a {
+            display: block;
+        }
+        .header:hover {
+            grid-template-rows: auto repeat(6, 1fr);
+            grid-template-columns: 1fr;
+        }
+        .header:hover .hamburger {
+            display: block;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#projectss">Projects</a>
+        <a href="#contactaa">Contact</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+    </header>
+    
+    <main class="container">
+        <section id="about" class="about">
+            <fig id="image">
+                <img src="public\dpimages.png" alt="Profile Image">
+                <figcaption>
+                    <div style="text-align: center;" id="namess">
+                        <br>
+                        <b style="font-size: 32px;">Venkat Sandeep Gadi</b><br><br>
+                        <b>MS in Computer Science</b>
+                    </div>
+                </figcaption>
+            </fig>
+            <div>
+                <div class="pnamess"><div class="adjust">About</div></div>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. ctetur adipisicing elit. Voluptatem voluptas molestias omnis amet Voluptatem voluptas molestias omnis amet explicabo fugiat ipsa similique. Porro ab, aperiam quasi voluptas dicta voluptatem quam dolorem sapiente cumque, quo modi.</article>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. ctetur adipisicing elit. Voluptatem voluptas molestias omnis amet Voluptatem voluptas molestias omnis amet explicabo fugiat ipsa similique. Porro ab, aperiam quasi voluptas dicta voluptatem quam dolorem sapiente cumque, quo modi.</article>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. ctetur adipisicing elit. Voluptatem voluptas molestias omnis amet Voluptatem voluptas molestias omnis amet explicabo fugiat ipsa similique. Porro ab, aperiam quasi voluptas dicta voluptatem quam dolorem sapiente cumque, quo modi.</article>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. ctetur adipisicing elit. Voluptatem voluptas molestias omnis amet Voluptatem voluptas molestias omnis amet explicabo fugiat ipsa similique. Porro ab, aperiam quasi voluptas dicta voluptatem quam dolorem sapiente cumque, quo modi.</article>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. ctetur adipisicing elit. Voluptatem voluptas molestias omnis amet Voluptatem voluptas molestias omnis amet explicabo fugiat ipsa similique. Porro ab, aperiam quasi voluptas dicta voluptatem quam dolorem sapiente cumque, quo modi.</article>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. ctetur adipisicing elit. Voluptatem voluptas molestias omnis amet Voluptatem voluptas molestias omnis amet explicabo fugiat ipsa similique. Porro ab, aperiam quasi voluptas dicta voluptatem quam dolorem sapiente cumque, quo modi.</article>
+                <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. ctetur adipisicing elit. Voluptatem voluptas molestias omnis amet Voluptatem voluptas molestias omnis amet explicabo fugiat ipsa similique. Porro ab, aperiam </article>
+
+                <br>
+                <div class="pnamess"><div class="adjust">Skills</div></div>
+                <section id="skills" class="skills">
+                    <div style="text-align: center;">
+                        Lorem ipsum dolor ipsum dolor<br><br>Lorem ipsum dolor ipsum dolor<br>
+                    </div>
+                    <div style="text-align: center;">
+                        Lorem ipsum dolor ipsum dolor<br><br>Lorem ipsum dolor ipsum dolor<br>
+                    </div>
+                    <div style="text-align: center;">
+                        Lorem ipsum dolor ipsum dolor<br><br>Lorem ipsum dolor ipsum dolor<br><br>
+                    </div>
+                </section>
+            </div>
+           
+        </section>
+        <br>
+        <section id="projectss" class="projects">
+            <div class="pnamess"><div class="adjust">Projects</div></div>
+            <div>
+                <div><img src="public/pro.png" alt="projectimage"></div>
+                <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <input id="para" type="submit" value="Read more">
+            </div>
+            <div>
+                <div><img src="public/pro.png" alt="projectimage"></div>
+                <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <input id="para" type="submit" value="Read more">
+            </div>
+            <div>
+                <div><img src="public/pro.png" alt="projectimage"></div>
+                <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <input id="para" type="submit" value="Read more">
+            </div>
+            <div>
+                <div><img src="public/pro.png" alt="projectimage"></div>
+                <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <input id="para" type="submit" value="Read more">
+            </div>
+            <div>
+                <div><img src="public/pro.png" alt="projectimage"></div>
+                <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <input id="para" type="submit" value="Read more">
+            </div>
+        </section>
+
+        <section id="experience" class="experience">    
+            <div class="pnamess"><div class="adjust">Experience</div></div>
+            <img id="expimg" src="public\pro.png" alt="projectimage" style="height:100%; width: 100%;">
+                <p id="exp">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, ad voluptatibus similique facere, atque nisi officiis repudiandae est error ipsum eaque! Soluta, aut voluptatum voluptate asperiores perferendis aspernatur harum sit!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, ad voluptatibus similique facere, atque nisi officiis repudiandae est error ipsum eaque! Soluta, aut voluptatum voluptate asperiores perferendis aspernatur harum sit!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, ad voluptatibus similique facere, atque nisi officiis repudiandae est error ipsum eaque! Soluta, aut voluptatum voluptate asperiores perferendis aspernatur harum sit!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, ad voluptatibus similique facere, atque nisi officiis repudiandae est error ipsum eaque! Soluta, aut voluptatum voluptate asperiores perferendis aspernatur harum sit!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, ad voluptatibus similique facere, atque nisi officiis repudiandae est error ipsum eaque! Soluta, aut voluptatum voluptate asperiores perferendis aspernatur harum sit!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, ad voluptatibus similique facere, atque nisi officiis repudiandae est error ipsum eaque! Soluta, aut voluptatum voluptate asperiores perferendis aspernatur harum sit!</p>
+        </section>
+        <section id="education" class="education">
+            <div class="pnamess"><div class="adjust">Education</div></div>
+            <div id="text1"><i class="fa-solid fa-graduation-cap"></i><b>Lorem Lorem ipsum, dolor sit amet consectetur a</b></div>
+            <div id="text2"><i class="fa-solid fa-graduation-cap"></i><b>Lorem Lorem ipsum, dolor sit amet consectetur a</b></div>
+            </div>
+        </section>
+
+        <section id="message" class="message">
+            <div class="pnamess"><div class="adjust">Message</div></div>
+            <input type="text" id="names" name="fname" placeholder="First Name">
+            <input type="text" id="names" name="fname" placeholder="Last name">
+            <input type="text" id="names" name="fname" placeholder="Email Address">
+            <input type="text" id="names" name="fname" placeholder="Your Message">
+            <input type="Submit" id="names" value="Send a message">
+        </section>
+
+        <section id="blog" class="blog">
+            <div class="pnamess"><div class="adjust">MyBlog</div></div>
+            <div id="blogimg">
+                <i class="fa-brands fa-blogger"></i>
+            </div>
+            <div>
+                uaerat nihil ipsum iusto voluptatem dolor quaerat nihil ipsum iusto voluptatem dolor uaerat nihil ipsum iusto voluptatem dolor quaerat nihil ipsum iusto voluptatem dolor uaerat nihil ipsum iusto voluptatem dolor quaerat nihil ipsum iusto voluptatem dolor sapiente fugiat doloribus.uaerat nihil ipsum iusto voluptatem dolor quaerat nihil ipsum iusto voluptatem dolor sapiente fugiat doloribus.quaerat nihil ipsum iusto voluptatem dolor quaerat nihil ipsum iusto voluptatem dolor sapiente fugiat doloribus.
+            </div>
+            <div id="submit">
+                <input type="submit" value="Visit">
+            </div>
+        </div>
+    </main>
+        <footer id="contactaa" class="contact">
+            <div class="pnamess"><div class="adjust">Contact</div></div>
+            <div><i class="fa-brands fa-linkedin"></i></div>
+            <div><i class="fa-solid fa-phone"></i></div>
+            <div><i class="fa-regular fa-envelope"></i></div>
+            <div><i class="fa-brands fa-x-twitter"></i></div>
+            <div><i class="fa-brands fa-youtube"></i></div>
+        </footer>
+
+</body>
+</html>
